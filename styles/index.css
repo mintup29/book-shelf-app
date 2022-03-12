@@ -1,0 +1,431 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+input,
+button {
+  font-family: "Acme", sans-serif;
+  background-color: white;
+}
+
+header {
+  display: inline;
+}
+
+.head-bar {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #deba9d;
+  color: white;
+}
+
+.head-bar a,
+.head-bar ul > li {
+  transition: color 0.3s ease-in-out;
+}
+
+main {
+  overflow: auto;
+}
+
+p {
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  top: 0;
+  position: sticky;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 400px) {
+  nav a {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 250px) {
+  nav a {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+nav a:hover {
+  color: #9e7777;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  display: inline;
+}
+
+#home {
+  display: flex;
+  align-items: center;
+  margin-top: -80px;
+  padding: 30px;
+  justify-content: space-between;
+  background-color: #f5e8c7;
+}
+
+.description > h1 {
+  font-size: 100px;
+}
+
+.description > p {
+  margin-bottom: 100px;
+}
+
+.home-image > img {
+  width: 75%;
+  max-height: auto;
+}
+
+.description,
+.home-image {
+  flex: 1;
+}
+
+#input-section {
+  padding: 20px;
+  border: 1px solid #9e7777;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #886666;
+  margin: 60px;
+  background-color: #fffcf4;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.input > label {
+  margin-bottom: 5px;
+}
+
+.input > input {
+  outline: none;
+  font-size: 15px;
+  border: 1px solid #9e7777;
+  border-radius: 5px;
+  padding: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.input > input:focus {
+  box-shadow: 0 0 8px #9e7777;
+}
+
+.input-inline {
+  margin-bottom: 30px;
+}
+
+.container > h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#bookSubmit {
+  border: none;
+  outline: none;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #9e7777;
+  width: 100%;
+  background-color: #deba9d;
+  border: 1px solid #deba9d;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#bookSubmit:hover {
+  background-color: whitesmoke;
+  color: black;
+}
+
+#search-section {
+  padding: 20px;
+  border: 1px solid #9e7777;
+  border-radius: 10px;
+  margin: 50px;
+  background-color: #fffcf4;
+  box-shadow: 0 0 10px #886666;
+}
+
+#searchBook {
+  margin-top: 10px;
+}
+
+#searchBookTitle {
+  outline: none;
+  font-size: 15px;
+  margin-top: 5px;
+  border-radius: 20px 0 0 20px;
+  float: left;
+  padding: 8px 100px 8px 10px;
+  border: 1px solid #8f7763;
+  transition: all 0.3s ease-in-out;
+}
+
+#searchBookTitle:focus {
+  box-shadow: 0 0 8px #9e7777;
+}
+
+#searchSubmit {
+  font-size: 15px;
+  margin-top: 5px;
+  padding: 8px 10px 8px 10px;
+  width: 80px;
+  color: white;
+  background-color: #8f7763;
+  border: 1px solid #8f7763;
+  border-radius: 0 20px 20px 0;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+#searchSubmit:hover {
+  background-color: white;
+  color: black;
+}
+
+#bookShelf {
+  padding: 20px 50px;
+  border: 1px solid #9e7777;
+  border-radius: 10px;
+  margin: 50px;
+  background-color: #fffcf4;
+  box-shadow: 0 0 10px #886666;
+}
+
+.book-list {
+  background-color: #8f7763;
+  height: 400px;
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 20px;
+  overflow: auto;
+}
+
+.book-shelf {
+  margin: 50px;
+}
+
+#bookShelf h2 {
+  font-size: 30px;
+  text-align: center;
+}
+
+.book-shelf > h3 {
+  font-size: 24px;
+  margin: 20px;
+}
+
+.book-list::-webkit-scrollbar {
+  width: 8px;
+}
+.book-list::-webkit-scrollbar-track {
+  background-color: #afafaf;
+  border-radius: 5px;
+}
+.book-list::-webkit-scrollbar-thumb {
+  background-color: #6f4c5b;
+  border-radius: 10px;
+  border: 2px solid #afafaf;
+}
+
+.book-card {
+  width: 100%;
+  min-height: 100px;
+  background-color: #f5e8c7;
+  box-shadow: 0 0 10px black;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.book-title {
+  color: #553d28;
+  margin-bottom: 10px;
+}
+
+.book-details {
+  color: #cc9753;
+  font-size: 18px;
+}
+
+.book-buttons {
+  margin-top: 5px;
+  text-align: right;
+}
+
+.book-buttons button {
+  min-width: 70px;
+  padding: 5px;
+  margin: 3px;
+  border-radius: 20px;
+}
+
+.book-buttons button {
+  transition: 0.5s;
+}
+.move-button {
+  border: 3px solid rgb(31, 121, 31);
+}
+.edit-button {
+  border: 3px solid rgb(223, 145, 2);
+}
+.delete-button {
+  border: 3px solid rgb(150, 13, 41);
+}
+.book-buttons button:hover {
+  filter: brightness(80%);
+  transition: 0.5s;
+}
+
+.edit-section {
+  position: fixed;
+}
+
+.edit-form {
+  position: relative;
+  margin: 0 400px;
+  transform: translate(0, -160%);
+  justify-content: center;
+  align-items: center;
+}
+
+#close-form {
+  position: relative;
+  float: right;
+  width: 45px;
+  padding: 10px;
+  font-size: 20px;
+  z-index: 10;
+  top: -10px;
+  left: 10px;
+  border-radius: 50%;
+}
+
+#edit-book {
+  background-color: #876445e1;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+#edit-book h3 {
+  font-size: 23px;
+  text-align: center;
+  padding: 25px;
+}
+
+#edit-submit {
+  padding: 5px 15px;
+  min-width: 100px;
+  font-size: 18px;
+  background-color: #60925c;
+  color: white;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+#edit-submit:hover {
+  filter: brightness(80%);
+  transition: 0.5s;
+}
+
+footer {
+  padding: 10px;
+  color: white;
+  background-color: #ad8787;
+  text-align: center;
+  font-weight: bold;
+  left: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 490px) {
+  #searchBookTitle {
+    padding: 8px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  #bookShelf h2,
+  .container > h2 {
+    font-size: 23px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .description > h1 {
+    font-size: 70px;
+  }
+  p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .book-shelf > h3,
+  #edit-book h3 {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .book-shelf {
+    margin: 30px 0;
+  }
+  #bookShelf {
+    padding: 20px 10px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #home {
+    flex-direction: column-reverse;
+    padding: 50px;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .edit-form {
+    margin: 0 150px;
+    transform: translate(0, -160%);
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .edit-form {
+    margin: 0;
+    transform: translate(0, -160%);
+  }
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bookshelf Apps</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="head-bar">
+        <a href="#home">
+          <svg style="width: 50px; height: 50px" viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              d="M11.79 11.5H9.72V8.19H12.19C13.45 8.19 14.15 8.75 14.15 9.78C14.15 10.9 13.32 11.5 11.79 11.5M12.16 12.63H9.72V16.27L12.28 16.27C13.84 16.27 14.66 15.64 14.66 14.44S13.81 12.63 12.16 12.63M22 5.31V18.69C22 20.5 20.5 22 18.69 22H5.31C3.5 22 2 20.5 2 18.69V5.31C2 3.5 3.5 2 5.31 2H18.69C20.5 2 22 3.5 22 5.31M16 14.5C16 13.12 15.08 12.13 13.67 11.95V11.89C14.67 11.71 15.46 10.71 15.46 9.63C15.46 8.08 14.26 7.05 12.5 7.05H8.43V17.41H12.47C14.68 17.41 16 16.32 16 14.5Z"
+            />
+          </svg>
+        </a>
+        <ul>
+          <li>
+            <a href="#input-section" title="Tambah Buku">
+              <svg style="width: 30px; height: 30px" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M13.09 20C13.21 20.72 13.46 21.39 13.81 22H6C4.89 22 4 21.11 4 20V4C4 2.9 4.89 2 6 2H18C19.11 2 20 2.9 20 4V13.09C19.67 13.04 19.34 13 19 13C18.66 13 18.33 13.04 18 13.09V4H13V12L10.5 9.75L8 12V4H6V20H13.09M20 18V15H18V18H15V20H18V23H20V20H23V18H20Z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#search-section" title="Cari Buku">
+              <svg style="width: 30px; height: 30px" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M15.5,12C18,12 20,14 20,16.5C20,17.38 19.75,18.21 19.31,18.9L22.39,22L21,23.39L17.88,20.32C17.19,20.75 16.37,21 15.5,21C13,21 11,19 11,16.5C11,14 13,12 15.5,12M15.5,14A2.5,2.5 0 0,0 13,16.5A2.5,2.5 0 0,0 15.5,19A2.5,2.5 0 0,0 18,16.5A2.5,2.5 0 0,0 15.5,14M13,4V12L10.5,9.75L8,12V4H6V20H10C10.54,20.81 11.23,21.5 12.03,22H6A2,2 0 0,1 4,20V4A2,2 0 0,1 6,2H18A2,2 0 0,1 20,4V11.81C19.42,11.26 18.75,10.81 18,10.5V4H13Z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#bookShelf" title="Daftar Buku">
+              <svg style="width: 30px; height: 30px" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M21,4H3A2,2 0 0,0 1,6V19A2,2 0 0,0 3,21H21A2,2 0 0,0 23,19V6A2,2 0 0,0 21,4M3,19V6H11V19H3M21,19H13V6H21V19M14,9.5H20V11H14V9.5M14,12H20V13.5H14V12M14,14.5H20V16H14V14.5Z"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="home">
+        <div class="description">
+          <h1>BUKUKU</h1>
+          <p>
+            Rak buku online yang digunakan untuk menyimpan beberapa deskripsi
+            buku yang ingin dibaca dan yang sudah dibaca
+          </p>
+          <h3>- Buku adalah jendela ilmu</h3>
+        </div>
+        <div class="home-image">
+          <img src="assets/shelf-092.png" />
+        </div>
+      </section>
+      <section id="input-section">
+        <div class="container">
+          <h2>Masukkan Buku Baru</h2>
+          <form id="inputBook">
+            <div class="input">
+              <label for="inputBookTitle">Judul</label>
+              <input id="inputBookTitle" type="text" required />
+            </div>
+            <div class="input">
+              <label for="inputBookAuthor">Penulis</label>
+              <input id="inputBookAuthor" type="text" required />
+            </div>
+            <div class="input">
+              <label for="inputBookYear">Tahun</label>
+              <input id="inputBookYear" type="number" required />
+            </div>
+            <div class="input-inline">
+              <label for="inputBookIsComplete">Selesai dibaca</label>
+              <input id="inputBookIsComplete" type="checkbox" />
+            </div>
+            <button id="bookSubmit" type="submit">Tambah Buku</button>
+          </form>
+        </div>
+      </section>
+      <section id="search-section">
+        <h2>Cari Buku</h2>
+        <form id="searchBook">
+          <input id="searchBookTitle" type="text" placeholder="Judul Buku" />
+          <button id="searchSubmit" type="button">Cari</button>
+        </form>
+      </section>
+      <section id="bookShelf">
+        <h2>Daftar Buku</h2>
+        <section class="book-shelf">
+          <h3>Belum Selesai Dibaca</h3>
+          <div id="unread" class="book-list"></div>
+        </section>
+        <section class="book-shelf">
+          <h3>Selesai Dibaca</h3>
+          <div id="read" class="book-list"></div>
+        </section>
+      </section>
+      <section id="edit-section" hidden>
+        <div class="edit-form">
+          <button id="close-form">X</button>
+          <form id="edit-book">
+            <h3>Edit Buku</h3>
+            <div class="input title">
+              <label for="editBookTitle">Judul</label>
+              <input id="editBookTitle" type="text" required />
+            </div>
+            <div class="flex-row">
+              <div class="input author">
+                <label for="editBookAuthor">Penulis</label>
+                <input id="editBookAuthor" type="text" required />
+              </div>
+              <div class="input year">
+                <label for="editBookYear">Tahun</label>
+                <input id="editBookYear" type="number" required />
+              </div>
+            </div>
+            <div class="flex-row">
+              <div class="input-checkbox">
+                <label for="editRead">Selesai dibaca</label>
+                <input id="editRead" type="checkbox" />
+              </div>
+              <div class="button">
+                <button id="edit-submit" type="button">Edit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Dibuat oleh Vicko Danendra Setyo Yuwono</p>
+      <p>Mahasiswa UNS Informatika</p>
+    </footer>
+    <script src="script/script.js"></script>
+  </body>
+</html>
